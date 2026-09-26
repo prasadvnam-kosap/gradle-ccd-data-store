@@ -116,7 +116,7 @@ jobs:
         if: always()
         run: |
           mkdir -p sbom
-          docker run --rm -v "$PWD:/w" -w /w ghcr.io/depproof/depproof:v0 \
+          docker run --rm -v "$PWD:/w" -w /w ghcr.io/depproof/depproof:v1 \
             scan --discover --output-dir sbom || true
           ls -la sbom/
 
